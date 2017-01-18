@@ -9,6 +9,5 @@ namespace LivePerformance.Data
 {
     public interface IBestellingContext
     {
-        DataTable GetAllIngredients();
     }
 }

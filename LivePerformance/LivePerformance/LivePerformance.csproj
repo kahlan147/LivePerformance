@@ -55,7 +55,9 @@
     <Compile Include="Data\BestellingContext.cs" />
     <Compile Include="Data\Database.cs" />
     <Compile Include="Data\IBestellingContext.cs" />
+    <Compile Include="Data\IInventarisContext.cs" />
     <Compile Include="Data\IKlantContext.cs" />
+    <Compile Include="Data\InventarisContext.cs" />
     <Compile Include="Data\KlantContext.cs" />
     <Compile Include="KlantAanmelden.cs">
       <SubType>Form</SubType>
@@ -69,6 +71,7 @@
     <Compile Include="Classes\Pizza.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Logic\BestellingRepository.cs" />
+    <Compile Include="Logic\InventarisRepository.cs" />
     <Compile Include="Logic\KlantRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

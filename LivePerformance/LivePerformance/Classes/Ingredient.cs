@@ -13,5 +13,24 @@ namespace LivePerformance
         public decimal InkoopPrijs { get; set; }
         public decimal VerkoopPrijs { get; set; }
         public bool Vegetarisch { get; set; }
+
+        public Ingredient()
+        {
+
+        }
+
+        public Ingredient(int Id, string Naam, decimal InkoopPrijs, decimal VerkoopPrijst, bool Vegetarisch)
+        {
+            this.Id = Id;
+            this.Naam = Naam;
+            this.InkoopPrijs = InkoopPrijs;
+            this.VerkoopPrijs = VerkoopPrijs;
+            this.Vegetarisch = Vegetarisch;
+        }
+
+        public override string ToString()
+        {
+            return Naam + ", " + InkoopPrijs + ", " + VerkoopPrijs + ", " + Vegetarisch;
+        }
     }
 }

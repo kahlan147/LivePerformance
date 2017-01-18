@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 
 namespace LivePerformance.Data
 {
-    public class BestellingContext : IBestellingContext
+    public interface IInventarisContext
     {
-        private string query;
-
+        List<Ingredient> GetAllIngredients();
     }
 }

@@ -17,9 +17,5 @@ namespace LivePerformance.Logic
             this.Context = context;
         }
 
-        public DataTable GetAllIngredients()
-        {
-            return Context.GetAllIngredients();
-        }
     }
 }
