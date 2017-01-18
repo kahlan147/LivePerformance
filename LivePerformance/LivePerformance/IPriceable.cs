@@ -8,7 +8,7 @@ namespace LivePerformance
 {
     public interface IPriceable
     {
-        public decimal InkoopPrijs;
-        public decimal VerkoopPrijs;
+        decimal InkoopPrijs { get; set; }
+        decimal VerkoopPrijs { get; set; }
     }
 }

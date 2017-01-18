@@ -20,11 +20,13 @@ namespace LivePerformance
         {
             this.Pizzas = new List<Pizza>();
             this.Products = new List<Product>();
+            this.TotalPrice = 0;
         }
 
         public decimal GetTotalPrice()
         {
-            return 0;
+            
+            return TotalPrice;
         }
 
         private decimal getCost(IPriceable Sellable, int reduction)
