@@ -14,30 +14,33 @@ namespace LivePerformance
 {
     public partial class Form1 : Form
     {
-        BestellingRepository BestellingRepo;
+        
         public Form1()
         {
             InitializeComponent();
-            BestellingRepo = new BestellingRepository(new BestellingContext());
-        }
-
-        private void btAanmaken_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btAanmelden_Click(object sender, EventArgs e)
         {
-
+            string Naam = tbNaam.Text;
+            string Adres = tbAdres.Text;
+            if (Naam != null && Naam != "")
+            {
+                Klant HuidigeKlant = new Klant(Naam, Adres);
+                BestellingForm bestellingForm = new BestellingForm(HuidigeKlant);
+                bestellingForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Voer een naam in");
+            }
         }
 
         private void btOnbekend_Click(object sender, EventArgs e)
         {
-            DataTable test = BestellingRepo.GetAllIngredients();
-            foreach (DataRow row in test.Rows)
-            {
-                listBox1.Items.Add(row["Naam"]);
-            }
+            Klant HuidigeKlant = new Klant();
+            BestellingForm bestellingForm = new BestellingForm(HuidigeKlant);
+            bestellingForm.Show();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace LivePerformance.Data
         public DataTable GetAllIngredients()
         {
             query = @"SELECT * FROM Ingredient";
-            DataTable result = Database.General(query);
+            DataTable result = Database.Execute(query);
             return result;
         }
     }

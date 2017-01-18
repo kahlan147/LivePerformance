@@ -30,7 +30,7 @@ namespace LivePerformance.Data
         }
 
         //Handles all the queries and gives back the datatable
-        public static DataTable General(string commandString)
+        public static DataTable Execute(string commandString)
         {
             DataTable dt = new DataTable();
 
