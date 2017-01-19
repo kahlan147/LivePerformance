@@ -38,8 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btMinEen = new System.Windows.Forms.Button();
-            this.btPlusEen = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lbBestelling = new System.Windows.Forms.ListBox();
             this.btVoegProd = new System.Windows.Forms.Button();
@@ -47,6 +45,14 @@
             this.lbProducten = new System.Windows.Forms.ListBox();
             this.lbStandPizza = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tbNewPizNaam = new System.Windows.Forms.TextBox();
+            this.btNewPizza = new System.Windows.Forms.Button();
+            this.btNewCusPizza = new System.Windows.Forms.Button();
+            this.btSaus = new System.Windows.Forms.Button();
+            this.btBodem = new System.Windows.Forms.Button();
+            this.lbZ = new System.Windows.Forms.Label();
+            this.lbY = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btGereed = new System.Windows.Forms.Button();
             this.btTopping = new System.Windows.Forms.Button();
@@ -64,37 +70,29 @@
             this.lbSaus = new System.Windows.Forms.ListBox();
             this.lbBodem = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btProAanmaken = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbAlcohol = new System.Windows.Forms.CheckBox();
+            this.tbProVer = new System.Windows.Forms.TextBox();
+            this.tbProIn = new System.Windows.Forms.TextBox();
+            this.btIngAanmaken = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbNewOnd = new System.Windows.Forms.ComboBox();
+            this.cbVegetarisch = new System.Windows.Forms.CheckBox();
+            this.tbProNaam = new System.Windows.Forms.TextBox();
+            this.tbVerkIng = new System.Windows.Forms.TextBox();
+            this.tbInkIng = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbIngNaam = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.lbY = new System.Windows.Forms.Label();
-            this.lbZ = new System.Windows.Forms.Label();
-            this.btBodem = new System.Windows.Forms.Button();
-            this.btSaus = new System.Windows.Forms.Button();
-            this.btNewCusPizza = new System.Windows.Forms.Button();
-            this.tbIngNaam = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbInkIng = new System.Windows.Forms.TextBox();
-            this.tbVerkIng = new System.Windows.Forms.TextBox();
-            this.tbProNaam = new System.Windows.Forms.TextBox();
-            this.cbVegetarisch = new System.Windows.Forms.CheckBox();
-            this.cbNewOnd = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btIngAanmaken = new System.Windows.Forms.Button();
-            this.tbProIn = new System.Windows.Forms.TextBox();
-            this.tbProVer = new System.Windows.Forms.TextBox();
-            this.cbAlcohol = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btProAanmaken = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.btNewPizza = new System.Windows.Forms.Button();
-            this.tbNewPizNaam = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -162,8 +160,6 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.btMinEen);
-            this.tabPage1.Controls.Add(this.btPlusEen);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.lbBestelling);
             this.tabPage1.Controls.Add(this.btVoegProd);
@@ -205,24 +201,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Pizzas";
             // 
-            // btMinEen
-            // 
-            this.btMinEen.Location = new System.Drawing.Point(483, 178);
-            this.btMinEen.Name = "btMinEen";
-            this.btMinEen.Size = new System.Drawing.Size(51, 45);
-            this.btMinEen.TabIndex = 12;
-            this.btMinEen.Text = "-1";
-            this.btMinEen.UseVisualStyleBackColor = true;
-            // 
-            // btPlusEen
-            // 
-            this.btPlusEen.Location = new System.Drawing.Point(483, 127);
-            this.btPlusEen.Name = "btPlusEen";
-            this.btPlusEen.Size = new System.Drawing.Size(51, 45);
-            this.btPlusEen.TabIndex = 11;
-            this.btPlusEen.Text = "+1";
-            this.btPlusEen.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(600, 355);
@@ -231,6 +209,7 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "Klaar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lbBestelling
             // 
@@ -309,6 +288,80 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Custom pizza";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(676, 169);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(38, 13);
+            this.label19.TabIndex = 23;
+            this.label19.Text = "Naam:";
+            // 
+            // tbNewPizNaam
+            // 
+            this.tbNewPizNaam.Location = new System.Drawing.Point(676, 185);
+            this.tbNewPizNaam.Name = "tbNewPizNaam";
+            this.tbNewPizNaam.Size = new System.Drawing.Size(68, 20);
+            this.tbNewPizNaam.TabIndex = 22;
+            // 
+            // btNewPizza
+            // 
+            this.btNewPizza.Location = new System.Drawing.Point(676, 211);
+            this.btNewPizza.Name = "btNewPizza";
+            this.btNewPizza.Size = new System.Drawing.Size(75, 65);
+            this.btNewPizza.TabIndex = 21;
+            this.btNewPizza.Text = "Als standaard opslaan";
+            this.btNewPizza.UseVisualStyleBackColor = true;
+            this.btNewPizza.Click += new System.EventHandler(this.btNewPizza_Click);
+            // 
+            // btNewCusPizza
+            // 
+            this.btNewCusPizza.Location = new System.Drawing.Point(224, 19);
+            this.btNewCusPizza.Name = "btNewCusPizza";
+            this.btNewCusPizza.Size = new System.Drawing.Size(118, 42);
+            this.btNewCusPizza.TabIndex = 20;
+            this.btNewCusPizza.Text = "Nieuwe pizza";
+            this.btNewCusPizza.UseVisualStyleBackColor = true;
+            this.btNewCusPizza.Click += new System.EventHandler(this.btNewCusPizza_Click);
+            // 
+            // btSaus
+            // 
+            this.btSaus.Location = new System.Drawing.Point(242, 353);
+            this.btSaus.Name = "btSaus";
+            this.btSaus.Size = new System.Drawing.Size(75, 23);
+            this.btSaus.TabIndex = 19;
+            this.btSaus.Text = "Voeg toe";
+            this.btSaus.UseVisualStyleBackColor = true;
+            this.btSaus.Click += new System.EventHandler(this.btSaus_Click);
+            // 
+            // btBodem
+            // 
+            this.btBodem.Location = new System.Drawing.Point(31, 353);
+            this.btBodem.Name = "btBodem";
+            this.btBodem.Size = new System.Drawing.Size(75, 23);
+            this.btBodem.TabIndex = 18;
+            this.btBodem.Text = "Voeg toe";
+            this.btBodem.UseVisualStyleBackColor = true;
+            this.btBodem.Click += new System.EventHandler(this.btBodem_Click);
+            // 
+            // lbZ
+            // 
+            this.lbZ.AutoSize = true;
+            this.lbZ.Location = new System.Drawing.Point(227, 84);
+            this.lbZ.Name = "lbZ";
+            this.lbZ.Size = new System.Drawing.Size(12, 13);
+            this.lbZ.TabIndex = 17;
+            this.lbZ.Text = "x";
+            // 
+            // lbY
+            // 
+            this.lbY.AutoSize = true;
+            this.lbY.Location = new System.Drawing.Point(108, 84);
+            this.lbY.Name = "lbY";
+            this.lbY.Size = new System.Drawing.Size(12, 13);
+            this.lbY.TabIndex = 16;
+            this.lbY.Text = "x";
             // 
             // label9
             // 
@@ -476,6 +529,177 @@
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(267, 22);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(44, 13);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Product";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(81, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(54, 13);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Ingredient";
+            // 
+            // btProAanmaken
+            // 
+            this.btProAanmaken.Location = new System.Drawing.Point(251, 314);
+            this.btProAanmaken.Name = "btProAanmaken";
+            this.btProAanmaken.Size = new System.Drawing.Size(75, 23);
+            this.btProAanmaken.TabIndex = 17;
+            this.btProAanmaken.Text = "Aanmaken";
+            this.btProAanmaken.UseVisualStyleBackColor = true;
+            this.btProAanmaken.Click += new System.EventHandler(this.btProAanmaken_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(243, 116);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 13);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "Naam";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(243, 171);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(108, 13);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Inkoop prijs in centen";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(243, 223);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(115, 13);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Verkoop prijs in centen";
+            // 
+            // cbAlcohol
+            // 
+            this.cbAlcohol.AutoSize = true;
+            this.cbAlcohol.Location = new System.Drawing.Point(246, 278);
+            this.cbAlcohol.Name = "cbAlcohol";
+            this.cbAlcohol.Size = new System.Drawing.Size(80, 17);
+            this.cbAlcohol.TabIndex = 13;
+            this.cbAlcohol.Text = "Alcoholisch";
+            this.cbAlcohol.UseVisualStyleBackColor = true;
+            // 
+            // tbProVer
+            // 
+            this.tbProVer.Location = new System.Drawing.Point(246, 239);
+            this.tbProVer.Name = "tbProVer";
+            this.tbProVer.Size = new System.Drawing.Size(100, 20);
+            this.tbProVer.TabIndex = 12;
+            // 
+            // tbProIn
+            // 
+            this.tbProIn.Location = new System.Drawing.Point(246, 187);
+            this.tbProIn.Name = "tbProIn";
+            this.tbProIn.Size = new System.Drawing.Size(100, 20);
+            this.tbProIn.TabIndex = 11;
+            // 
+            // btIngAanmaken
+            // 
+            this.btIngAanmaken.Location = new System.Drawing.Point(45, 321);
+            this.btIngAanmaken.Name = "btIngAanmaken";
+            this.btIngAanmaken.Size = new System.Drawing.Size(75, 23);
+            this.btIngAanmaken.TabIndex = 10;
+            this.btIngAanmaken.Text = "Aanmaken";
+            this.btIngAanmaken.UseVisualStyleBackColor = true;
+            this.btIngAanmaken.Click += new System.EventHandler(this.btIngAanmaken_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(42, 259);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Onderdeel";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(42, 184);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(115, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Verkoop prijs in centen";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(39, 132);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Inkoop prijs in centen";
+            // 
+            // cbNewOnd
+            // 
+            this.cbNewOnd.FormattingEnabled = true;
+            this.cbNewOnd.Location = new System.Drawing.Point(42, 275);
+            this.cbNewOnd.Name = "cbNewOnd";
+            this.cbNewOnd.Size = new System.Drawing.Size(100, 21);
+            this.cbNewOnd.TabIndex = 6;
+            // 
+            // cbVegetarisch
+            // 
+            this.cbVegetarisch.AutoSize = true;
+            this.cbVegetarisch.Location = new System.Drawing.Point(45, 239);
+            this.cbVegetarisch.Name = "cbVegetarisch";
+            this.cbVegetarisch.Size = new System.Drawing.Size(82, 17);
+            this.cbVegetarisch.TabIndex = 5;
+            this.cbVegetarisch.Text = "Vegetarisch";
+            this.cbVegetarisch.UseVisualStyleBackColor = true;
+            // 
+            // tbProNaam
+            // 
+            this.tbProNaam.Location = new System.Drawing.Point(246, 132);
+            this.tbProNaam.Name = "tbProNaam";
+            this.tbProNaam.Size = new System.Drawing.Size(100, 20);
+            this.tbProNaam.TabIndex = 4;
+            // 
+            // tbVerkIng
+            // 
+            this.tbVerkIng.Location = new System.Drawing.Point(42, 200);
+            this.tbVerkIng.Name = "tbVerkIng";
+            this.tbVerkIng.Size = new System.Drawing.Size(100, 20);
+            this.tbVerkIng.TabIndex = 3;
+            // 
+            // tbInkIng
+            // 
+            this.tbInkIng.Location = new System.Drawing.Point(42, 148);
+            this.tbInkIng.Name = "tbInkIng";
+            this.tbInkIng.Size = new System.Drawing.Size(100, 20);
+            this.tbInkIng.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(42, 77);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Naam";
+            // 
+            // tbIngNaam
+            // 
+            this.tbIngNaam.Location = new System.Drawing.Point(42, 93);
+            this.tbIngNaam.Name = "tbIngNaam";
+            this.tbIngNaam.Size = new System.Drawing.Size(100, 20);
+            this.tbIngNaam.TabIndex = 0;
+            // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -505,251 +729,6 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // lbY
-            // 
-            this.lbY.AutoSize = true;
-            this.lbY.Location = new System.Drawing.Point(108, 84);
-            this.lbY.Name = "lbY";
-            this.lbY.Size = new System.Drawing.Size(12, 13);
-            this.lbY.TabIndex = 16;
-            this.lbY.Text = "x";
-            // 
-            // lbZ
-            // 
-            this.lbZ.AutoSize = true;
-            this.lbZ.Location = new System.Drawing.Point(227, 84);
-            this.lbZ.Name = "lbZ";
-            this.lbZ.Size = new System.Drawing.Size(12, 13);
-            this.lbZ.TabIndex = 17;
-            this.lbZ.Text = "x";
-            // 
-            // btBodem
-            // 
-            this.btBodem.Location = new System.Drawing.Point(31, 353);
-            this.btBodem.Name = "btBodem";
-            this.btBodem.Size = new System.Drawing.Size(75, 23);
-            this.btBodem.TabIndex = 18;
-            this.btBodem.Text = "Voeg toe";
-            this.btBodem.UseVisualStyleBackColor = true;
-            this.btBodem.Click += new System.EventHandler(this.btBodem_Click);
-            // 
-            // btSaus
-            // 
-            this.btSaus.Location = new System.Drawing.Point(242, 353);
-            this.btSaus.Name = "btSaus";
-            this.btSaus.Size = new System.Drawing.Size(75, 23);
-            this.btSaus.TabIndex = 19;
-            this.btSaus.Text = "Voeg toe";
-            this.btSaus.UseVisualStyleBackColor = true;
-            this.btSaus.Click += new System.EventHandler(this.btSaus_Click);
-            // 
-            // btNewCusPizza
-            // 
-            this.btNewCusPizza.Location = new System.Drawing.Point(224, 19);
-            this.btNewCusPizza.Name = "btNewCusPizza";
-            this.btNewCusPizza.Size = new System.Drawing.Size(118, 42);
-            this.btNewCusPizza.TabIndex = 20;
-            this.btNewCusPizza.Text = "Nieuwe pizza";
-            this.btNewCusPizza.UseVisualStyleBackColor = true;
-            this.btNewCusPizza.Click += new System.EventHandler(this.btNewCusPizza_Click);
-            // 
-            // tbIngNaam
-            // 
-            this.tbIngNaam.Location = new System.Drawing.Point(42, 93);
-            this.tbIngNaam.Name = "tbIngNaam";
-            this.tbIngNaam.Size = new System.Drawing.Size(100, 20);
-            this.tbIngNaam.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(42, 77);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Naam";
-            // 
-            // tbInkIng
-            // 
-            this.tbInkIng.Location = new System.Drawing.Point(42, 148);
-            this.tbInkIng.Name = "tbInkIng";
-            this.tbInkIng.Size = new System.Drawing.Size(100, 20);
-            this.tbInkIng.TabIndex = 2;
-            // 
-            // tbVerkIng
-            // 
-            this.tbVerkIng.Location = new System.Drawing.Point(42, 200);
-            this.tbVerkIng.Name = "tbVerkIng";
-            this.tbVerkIng.Size = new System.Drawing.Size(100, 20);
-            this.tbVerkIng.TabIndex = 3;
-            // 
-            // tbProNaam
-            // 
-            this.tbProNaam.Location = new System.Drawing.Point(246, 132);
-            this.tbProNaam.Name = "tbProNaam";
-            this.tbProNaam.Size = new System.Drawing.Size(100, 20);
-            this.tbProNaam.TabIndex = 4;
-            // 
-            // cbVegetarisch
-            // 
-            this.cbVegetarisch.AutoSize = true;
-            this.cbVegetarisch.Location = new System.Drawing.Point(45, 239);
-            this.cbVegetarisch.Name = "cbVegetarisch";
-            this.cbVegetarisch.Size = new System.Drawing.Size(82, 17);
-            this.cbVegetarisch.TabIndex = 5;
-            this.cbVegetarisch.Text = "Vegetarisch";
-            this.cbVegetarisch.UseVisualStyleBackColor = true;
-            // 
-            // cbNewOnd
-            // 
-            this.cbNewOnd.FormattingEnabled = true;
-            this.cbNewOnd.Location = new System.Drawing.Point(42, 275);
-            this.cbNewOnd.Name = "cbNewOnd";
-            this.cbNewOnd.Size = new System.Drawing.Size(100, 21);
-            this.cbNewOnd.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(39, 132);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Inkoop prijs in centen";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(42, 184);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 13);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Verkoop prijs in centen";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(42, 259);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 13);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Onderdeel";
-            // 
-            // btIngAanmaken
-            // 
-            this.btIngAanmaken.Location = new System.Drawing.Point(45, 321);
-            this.btIngAanmaken.Name = "btIngAanmaken";
-            this.btIngAanmaken.Size = new System.Drawing.Size(75, 23);
-            this.btIngAanmaken.TabIndex = 10;
-            this.btIngAanmaken.Text = "Aanmaken";
-            this.btIngAanmaken.UseVisualStyleBackColor = true;
-            this.btIngAanmaken.Click += new System.EventHandler(this.btIngAanmaken_Click);
-            // 
-            // tbProIn
-            // 
-            this.tbProIn.Location = new System.Drawing.Point(246, 187);
-            this.tbProIn.Name = "tbProIn";
-            this.tbProIn.Size = new System.Drawing.Size(100, 20);
-            this.tbProIn.TabIndex = 11;
-            // 
-            // tbProVer
-            // 
-            this.tbProVer.Location = new System.Drawing.Point(246, 239);
-            this.tbProVer.Name = "tbProVer";
-            this.tbProVer.Size = new System.Drawing.Size(100, 20);
-            this.tbProVer.TabIndex = 12;
-            // 
-            // cbAlcohol
-            // 
-            this.cbAlcohol.AutoSize = true;
-            this.cbAlcohol.Location = new System.Drawing.Point(246, 278);
-            this.cbAlcohol.Name = "cbAlcohol";
-            this.cbAlcohol.Size = new System.Drawing.Size(80, 17);
-            this.cbAlcohol.TabIndex = 13;
-            this.cbAlcohol.Text = "Alcoholisch";
-            this.cbAlcohol.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(243, 223);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 13);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Verkoop prijs in centen";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(243, 171);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(108, 13);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "Inkoop prijs in centen";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(243, 116);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 13);
-            this.label16.TabIndex = 16;
-            this.label16.Text = "Naam";
-            // 
-            // btProAanmaken
-            // 
-            this.btProAanmaken.Location = new System.Drawing.Point(251, 314);
-            this.btProAanmaken.Name = "btProAanmaken";
-            this.btProAanmaken.Size = new System.Drawing.Size(75, 23);
-            this.btProAanmaken.TabIndex = 17;
-            this.btProAanmaken.Text = "Aanmaken";
-            this.btProAanmaken.UseVisualStyleBackColor = true;
-            this.btProAanmaken.Click += new System.EventHandler(this.btProAanmaken_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(81, 22);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(54, 13);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Ingredient";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(267, 22);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 13);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Product";
-            // 
-            // btNewPizza
-            // 
-            this.btNewPizza.Location = new System.Drawing.Point(676, 211);
-            this.btNewPizza.Name = "btNewPizza";
-            this.btNewPizza.Size = new System.Drawing.Size(75, 65);
-            this.btNewPizza.TabIndex = 21;
-            this.btNewPizza.Text = "Als standaard opslaan";
-            this.btNewPizza.UseVisualStyleBackColor = true;
-            this.btNewPizza.Click += new System.EventHandler(this.btNewPizza_Click);
-            // 
-            // tbNewPizNaam
-            // 
-            this.tbNewPizNaam.Location = new System.Drawing.Point(676, 185);
-            this.tbNewPizNaam.Name = "tbNewPizNaam";
-            this.tbNewPizNaam.Size = new System.Drawing.Size(68, 20);
-            this.tbNewPizNaam.TabIndex = 22;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(676, 169);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(38, 13);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "Naam:";
             // 
             // Form1
             // 
@@ -796,8 +775,6 @@
         private System.Windows.Forms.Button btVoegProd;
         private System.Windows.Forms.ListBox lbBestelling;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btPlusEen;
-        private System.Windows.Forms.Button btMinEen;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

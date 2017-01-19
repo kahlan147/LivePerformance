@@ -17,5 +17,10 @@ namespace LivePerformance.Logic
             this.Context = context;
         }
 
+        public void CreateNieuweBestelling(Bestelling bestelling)
+        {
+            Context.CreateNieuweBestelling(bestelling);
+        }
+
     }
 }

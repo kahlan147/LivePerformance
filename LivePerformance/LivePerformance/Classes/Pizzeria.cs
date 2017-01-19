@@ -14,6 +14,7 @@ namespace LivePerformance.Classes
     public class Pizzeria
     {
         private InventarisRepository InventarisRepo;
+        private BestellingRepository BestellingRepo;
         public Klant HuidigeKlant { get; private set; }
         public List<Product> Products { get; private set; }
         public List<Pizza> Pizzas { get; private set; }
@@ -25,6 +26,7 @@ namespace LivePerformance.Classes
         public Pizzeria()
         {
             InventarisRepo = new InventarisRepository(new InventarisContext());
+            BestellingRepo = new BestellingRepository(new BestellingContext());
             GetLists();
         }
 
@@ -39,6 +41,11 @@ namespace LivePerformance.Classes
         {
             HuidigeKlant = new Klant(Naam, Adres);
             HuidigeBestelling = new Bestelling(HuidigeKlant);
+        }
+
+        public void SaveBestelling()
+        {
+            BestellingRepo.CreateNieuweBestelling(HuidigeBestelling);
         }
 
         public void AddPizzaToBestelling(string PizzaString)

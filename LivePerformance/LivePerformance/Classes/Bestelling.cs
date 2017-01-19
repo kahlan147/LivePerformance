@@ -13,9 +13,8 @@ namespace LivePerformance
         public bool Ophalen { get; set; }
         public List<Pizza> Pizzas { get; set; }
         public List<Product> Products { get; set; }
+
         public readonly Klant HuidigeKlant;
-
-
 
         public Bestelling(Klant HuidigeKlant)
         {

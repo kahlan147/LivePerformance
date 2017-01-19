@@ -99,6 +99,12 @@ namespace LivePerformance
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pizzeria.SaveBestelling();
+        }
+
+
         //tab 2
 
         private void LoadTab2()
@@ -319,6 +325,7 @@ namespace LivePerformance
             pizzeria.GetLists();
             LoadListBoxes();
         }
+
 
 
 

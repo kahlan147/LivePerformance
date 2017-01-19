@@ -9,5 +9,6 @@ namespace LivePerformance.Data
 {
     public interface IBestellingContext
     {
+        void CreateNieuweBestelling(Bestelling bestelling);
     }
 }
