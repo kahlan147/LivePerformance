@@ -44,26 +44,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BestellingForm.cs">
+    <Compile Include="Classes\Pizzeria.cs" />
+    <Compile Include="Forms\BestellingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BestellingForm.Designer.cs">
+    <Compile Include="Forms\BestellingForm.Designer.cs">
       <DependentUpon>BestellingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Bestelling.cs" />
     <Compile Include="Classes\CustomPizza.cs" />
     <Compile Include="Data\BestellingContext.cs" />
+    <Compile Include="Data\BonnetjeSchrijver.cs" />
     <Compile Include="Data\Database.cs" />
     <Compile Include="Data\IBestellingContext.cs" />
     <Compile Include="Data\IInventarisContext.cs" />
     <Compile Include="Data\IKlantContext.cs" />
     <Compile Include="Data\InventarisContext.cs" />
     <Compile Include="Data\KlantContext.cs" />
-    <Compile Include="KlantAanmelden.cs">
+    <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KlantAanmelden.Designer.cs">
-      <DependentUpon>KlantAanmelden.cs</DependentUpon>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Ingredient.cs" />
     <Compile Include="IPriceable.cs" />
@@ -76,11 +78,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\StandaardPizza.cs" />
-    <EmbeddedResource Include="BestellingForm.resx">
+    <EmbeddedResource Include="Forms\BestellingForm.resx">
       <DependentUpon>BestellingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KlantAanmelden.resx">
-      <DependentUpon>KlantAanmelden.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -9,6 +9,6 @@ namespace LivePerformance.Data
     public interface IKlantContext
     {
         void AddKlant(string Naam, string Adres);
-        void GeefKlantNummer(Klant klant);
+        int GeefKlantNummer(Klant klant);
     }
 }

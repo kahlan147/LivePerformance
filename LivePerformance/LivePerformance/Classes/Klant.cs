@@ -29,7 +29,7 @@ namespace LivePerformance
             KlantRepo.AddKlant(Naam, Adres);
             this.Naam = Naam;
             this.Adres = Adres;
-            KlantRepo.GeefKlantNummer(this);
+            this.Klantnummer = KlantRepo.GeefKlantNummer(this);
         }
     }
 }

@@ -9,5 +9,7 @@ namespace LivePerformance.Data
     public interface IInventarisContext
     {
         List<Ingredient> GetAllIngredients();
+        List<Product> GetAllProducts();
+        List<Pizza> GetAllStandardPizzas();
     }
 }

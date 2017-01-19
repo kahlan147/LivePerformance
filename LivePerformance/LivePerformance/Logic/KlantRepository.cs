@@ -22,9 +22,9 @@ namespace LivePerformance.Logic
             Context.AddKlant(Naam, Adres);
         }
 
-        public void GeefKlantNummer(Klant klant)
+        public int GeefKlantNummer(Klant klant)
         {
-            Context.GeefKlantNummer(klant);
+            return Context.GeefKlantNummer(klant);
         }
     }
 }

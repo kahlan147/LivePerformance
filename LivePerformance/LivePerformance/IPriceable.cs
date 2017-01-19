@@ -10,5 +10,7 @@ namespace LivePerformance
     {
         decimal InkoopPrijs { get; set; }
         decimal VerkoopPrijs { get; set; }
+
+        decimal CalcTruePrice();
     }
 }

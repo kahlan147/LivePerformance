@@ -13,25 +13,37 @@ namespace LivePerformance
         public bool Ophalen { get; set; }
         public List<Pizza> Pizzas { get; set; }
         public List<Product> Products { get; set; }
+        public readonly Klant HuidigeKlant;
 
-        private decimal TotalPrice;
 
-        public Bestelling()
+
+        public Bestelling(Klant HuidigeKlant)
         {
             this.Pizzas = new List<Pizza>();
             this.Products = new List<Product>();
-            this.TotalPrice = 0;
+            this.HuidigeKlant = HuidigeKlant;
         }
 
         public decimal GetTotalPrice()
         {
-            
+            decimal TotalPrice = 0;
+            foreach (Pizza pizza in Pizzas)
+            {
+                foreach (Ingredient ingredient in pizza.Ingredienten)
+                {
+                    TotalPrice += getCost(ingredient, Convert.ToDecimal(0.25));
+                }
+            }
+            foreach (Product product in Products)
+            {
+                TotalPrice += getCost(product, 0);
+            }
             return TotalPrice;
         }
 
-        private decimal getCost(IPriceable Sellable, int reduction)
+        private decimal getCost(IPriceable Sellable, decimal reduction)
         {
-            return 0;
+            return Sellable.VerkoopPrijs - (Sellable.VerkoopPrijs * reduction);
         }
     }
 }

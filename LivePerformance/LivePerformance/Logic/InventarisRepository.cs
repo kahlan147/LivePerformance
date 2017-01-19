@@ -21,5 +21,15 @@ namespace LivePerformance.Logic
             return Context.GetAllIngredients();
         }
 
+        public List<Product> GetAllProducts()
+        {
+            return Context.GetAllProducts();
+        }
+
+        public List<Pizza> GetAllStandardPizzas()
+        {
+            return Context.GetAllStandardPizzas();
+        }
+
     }
 }

@@ -17,12 +17,12 @@ namespace LivePerformance.Data
             Database.Execute(query);
         }
 
-        public void GeefKlantNummer(Klant klant)
+        public int GeefKlantNummer(Klant klant)
         {
-            query = @"SELECT dbo.GeefKlantNummer('" + klant.Naam + "', '" + klant.Adres + "') as 'Klantnummer';";
+            query = @"SELECT dbo.GeefKlantNummer('"+ klant.Naam + "', '" + klant.Adres  + "') as 'Klantnummer';";
             DataTable result = Database.Execute(query);
             DataRow row = result.Rows[0];
-            klant.Klantnummer = Convert.ToInt32(row["Klantnummer"]);
+            return Convert.ToInt32(row["Klantnummer"]);
         }
     }
 }
