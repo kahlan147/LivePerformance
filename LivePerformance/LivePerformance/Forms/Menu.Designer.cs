@@ -72,9 +72,21 @@
             this.btBodem = new System.Windows.Forms.Button();
             this.btSaus = new System.Windows.Forms.Button();
             this.btNewCusPizza = new System.Windows.Forms.Button();
+            this.tbIngNaam = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbInkIng = new System.Windows.Forms.TextBox();
+            this.tbVerkIng = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cbVegetarisch = new System.Windows.Forms.CheckBox();
+            this.cbNewOnd = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btIngAanmaken = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbNaam
@@ -421,6 +433,17 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btIngAanmaken);
+            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.cbNewOnd);
+            this.tabPage3.Controls.Add(this.cbVegetarisch);
+            this.tabPage3.Controls.Add(this.textBox4);
+            this.tabPage3.Controls.Add(this.tbVerkIng);
+            this.tabPage3.Controls.Add(this.tbInkIng);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.tbIngNaam);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -507,6 +530,98 @@
             this.btNewCusPizza.UseVisualStyleBackColor = true;
             this.btNewCusPizza.Click += new System.EventHandler(this.btNewCusPizza_Click);
             // 
+            // tbIngNaam
+            // 
+            this.tbIngNaam.Location = new System.Drawing.Point(44, 38);
+            this.tbIngNaam.Name = "tbIngNaam";
+            this.tbIngNaam.Size = new System.Drawing.Size(100, 20);
+            this.tbIngNaam.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(44, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Naam";
+            // 
+            // tbInkIng
+            // 
+            this.tbInkIng.Location = new System.Drawing.Point(44, 93);
+            this.tbInkIng.Name = "tbInkIng";
+            this.tbInkIng.Size = new System.Drawing.Size(100, 20);
+            this.tbInkIng.TabIndex = 2;
+            // 
+            // tbVerkIng
+            // 
+            this.tbVerkIng.Location = new System.Drawing.Point(44, 145);
+            this.tbVerkIng.Name = "tbVerkIng";
+            this.tbVerkIng.Size = new System.Drawing.Size(100, 20);
+            this.tbVerkIng.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(257, 38);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 4;
+            // 
+            // cbVegetarisch
+            // 
+            this.cbVegetarisch.AutoSize = true;
+            this.cbVegetarisch.Location = new System.Drawing.Point(47, 184);
+            this.cbVegetarisch.Name = "cbVegetarisch";
+            this.cbVegetarisch.Size = new System.Drawing.Size(82, 17);
+            this.cbVegetarisch.TabIndex = 5;
+            this.cbVegetarisch.Text = "Vegetarisch";
+            this.cbVegetarisch.UseVisualStyleBackColor = true;
+            // 
+            // cbNewOnd
+            // 
+            this.cbNewOnd.FormattingEnabled = true;
+            this.cbNewOnd.Location = new System.Drawing.Point(44, 220);
+            this.cbNewOnd.Name = "cbNewOnd";
+            this.cbNewOnd.Size = new System.Drawing.Size(100, 21);
+            this.cbNewOnd.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(41, 77);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Inkoop prijs in centen";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(44, 129);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(115, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Verkoop prijs in centen";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(44, 204);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Onderdeel";
+            // 
+            // btIngAanmaken
+            // 
+            this.btIngAanmaken.Location = new System.Drawing.Point(47, 266);
+            this.btIngAanmaken.Name = "btIngAanmaken";
+            this.btIngAanmaken.Size = new System.Drawing.Size(75, 23);
+            this.btIngAanmaken.TabIndex = 10;
+            this.btIngAanmaken.Text = "Aanmaken";
+            this.btIngAanmaken.UseVisualStyleBackColor = true;
+            this.btIngAanmaken.Click += new System.EventHandler(this.btIngAanmaken_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,6 +640,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -576,6 +693,17 @@
         private System.Windows.Forms.Button btSaus;
         private System.Windows.Forms.Button btBodem;
         private System.Windows.Forms.Button btNewCusPizza;
+        private System.Windows.Forms.Button btIngAanmaken;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbNewOnd;
+        private System.Windows.Forms.CheckBox cbVegetarisch;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbVerkIng;
+        private System.Windows.Forms.TextBox tbInkIng;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbIngNaam;
     }
 }
 

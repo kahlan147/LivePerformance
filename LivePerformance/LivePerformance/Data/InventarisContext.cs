@@ -73,5 +73,42 @@ namespace LivePerformance.Data
 
             return Pizzas;
         }
+
+        public void AddNewIngredient(Ingredient ingredient)
+        {
+            int vegetarisch = 0;
+            int onderdeel = 0;
+            if(ingredient.Vegetarisch == true){
+                vegetarisch = 1;
+            }
+            if(ingredient.onderdeel == Onderdeel.Saus){
+                onderdeel = 1;
+            }
+            else if(ingredient.onderdeel == Onderdeel.Topping){
+                onderdeel = 2;
+            }
+            query = @"EXECUTE AddIngredient '" + ingredient.Naam + "', " + ingredient.InkoopPrijs +", " +ingredient.VerkoopPrijs +", "+ vegetarisch + ", " + onderdeel +";";
+            Database.Execute(query);
+        }
+
+        public void AddNewStandardPizza(Pizza pizza)
+        {
+            StandaardPizza newPizza = (StandaardPizza)pizza;
+            query = @"EXECUTE AddStandaardPizza '" + newPizza.Naam + "', '" + newPizza.Vorm + "', '" + newPizza.Formaat + "';";
+            Database.Execute(query);
+            query = @"SELECT dbo.GetNieuweStandaardPizzaId() AS 'Id';";
+            DataTable result = Database.Execute(query);
+            DataRow row = result.Rows[0];
+            int Id = Convert.ToInt32(row["Id"].ToString());
+            foreach (Ingredient ingredient in pizza.Ingredienten)
+            {
+                query = @"EXECUTE "; /////////////////
+            }
+        }
+
+        public void AddNewProduct(Product product)
+        {
+
+        }
     }
 }

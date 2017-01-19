@@ -71,5 +71,10 @@ namespace LivePerformance.Classes
             }
             HuidigeBestelling.Products.Add(chosenProduct);
         }
+
+        public void AddNewIngredient(Ingredient ingredient)
+        {
+            InventarisRepo.AddNewIngredient(ingredient);
+        }
     }
 }

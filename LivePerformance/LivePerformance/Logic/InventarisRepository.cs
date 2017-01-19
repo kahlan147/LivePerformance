@@ -31,5 +31,20 @@ namespace LivePerformance.Logic
             return Context.GetAllStandardPizzas();
         }
 
+        public void AddNewIngredient(Ingredient ingredient)
+        {
+            Context.AddNewIngredient(ingredient);
+        }
+
+        public void AddNewStandardPizza(Pizza pizza)
+        {
+            Context.AddNewStandardPizza(pizza);
+        }
+
+        public void AddNewProduct(Product product)
+        {
+            Context.AddNewProduct(product);
+        }
+
     }
 }

@@ -22,6 +22,7 @@ namespace LivePerformance
             pizzeria = new Pizzeria();
             LoadListBoxes();
             LoadTab2();
+            LoadTab3();
         }
 
         private void LoadListBoxes(){
@@ -274,6 +275,26 @@ namespace LivePerformance
             pizzeria.CurrentNewPizza = null;
             lbCustPizzaIng.Items.Clear();
             MessageBox.Show("Custom pizza is aan de bestelling toegevoegd");
+        }
+
+        //tab 3
+        private void LoadTab3()
+        {
+            cbNewOnd.Items.Add(Onderdeel.Bodem);
+            cbNewOnd.Items.Add(Onderdeel.Saus);
+            cbNewOnd.Items.Add(Onderdeel.Topping);
+            cbNewOnd.SelectedIndex = 0;
+        }
+
+        private void btIngAanmaken_Click(object sender, EventArgs e)
+        {
+            string Naam = tbIngNaam.Text;
+            decimal InkoopPrijs = Convert.ToDecimal(tbInkIng.Text);
+            decimal VerkoopPrijs = Convert.ToDecimal(tbVerkIng.Text);
+            bool Vegetarisch = cbVegetarisch.Checked;
+            Onderdeel onderdeel = (Onderdeel)cbNewOnd.SelectedItem;
+            Ingredient newIngredient = new Ingredient(-1, Naam, InkoopPrijs, VerkoopPrijs, Vegetarisch, onderdeel);
+            pizzeria.AddNewIngredient(newIngredient);
         }
 
 
