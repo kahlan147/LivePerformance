@@ -28,7 +28,7 @@ namespace LivePerformance.Classes
             GetLists();
         }
 
-        private void GetLists()
+        public void GetLists()
         {
             Products = InventarisRepo.GetAllProducts();
             Pizzas = InventarisRepo.GetAllStandardPizzas();
@@ -75,6 +75,16 @@ namespace LivePerformance.Classes
         public void AddNewIngredient(Ingredient ingredient)
         {
             InventarisRepo.AddNewIngredient(ingredient);
+        }
+
+        public void AddNewProduct(Product product)
+        {
+            InventarisRepo.AddNewProduct(product);
+        }
+
+        public void AddNewStandardPizza(Pizza pizza)
+        {
+            InventarisRepo.AddNewStandardPizza(pizza);
         }
     }
 }

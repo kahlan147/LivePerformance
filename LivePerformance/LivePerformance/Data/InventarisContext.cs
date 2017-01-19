@@ -91,24 +91,30 @@ namespace LivePerformance.Data
             Database.Execute(query);
         }
 
-        public void AddNewStandardPizza(Pizza pizza)
+        public void AddNewStandardPizza(Pizza newPizza)
         {
-            StandaardPizza newPizza = (StandaardPizza)pizza;
             query = @"EXECUTE AddStandaardPizza '" + newPizza.Naam + "', '" + newPizza.Vorm + "', '" + newPizza.Formaat + "';";
             Database.Execute(query);
             query = @"SELECT dbo.GetNieuweStandaardPizzaId() AS 'Id';";
             DataTable result = Database.Execute(query);
             DataRow row = result.Rows[0];
             int Id = Convert.ToInt32(row["Id"].ToString());
-            foreach (Ingredient ingredient in pizza.Ingredienten)
+            foreach (Ingredient ingredient in newPizza.Ingredienten)
             {
-                query = @"EXECUTE "; /////////////////
+                query = @"INSERT INTO StandaardPizza VALUES(" + Id + ", " + ingredient.Id + ");";
+                Database.Execute(query);
             }
         }
 
         public void AddNewProduct(Product product)
         {
-
+            int Alcoholisch = 0;
+            if (product.Alcoholisch == true)
+            {
+                Alcoholisch = 1;
+            }
+            query = @"EXECUTE AddProduct '" + product.Naam + "', " + product.InkoopPrijs + ", " + product.VerkoopPrijs + ", " + Alcoholisch + ";";
+            Database.Execute(query);
         }
     }
 }

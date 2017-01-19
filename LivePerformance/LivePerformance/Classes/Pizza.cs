@@ -8,6 +8,7 @@ namespace LivePerformance
 {
     public abstract class Pizza
     {
+        public string Naam { get; set; }
         public string Vorm { get; set; }
         public string Formaat { get; set; }
         public List<Ingredient> Ingredienten { get; set; }

@@ -277,6 +277,15 @@ namespace LivePerformance
             MessageBox.Show("Custom pizza is aan de bestelling toegevoegd");
         }
 
+        private void btNewPizza_Click(object sender, EventArgs e)
+        {
+            pizzeria.CurrentNewPizza.Naam = tbNewPizNaam.Text;
+            pizzeria.AddNewStandardPizza(pizzeria.CurrentNewPizza);
+            pizzeria.GetLists();
+            LoadListBoxes();
+        }
+
+
         //tab 3
         private void LoadTab3()
         {
@@ -295,7 +304,22 @@ namespace LivePerformance
             Onderdeel onderdeel = (Onderdeel)cbNewOnd.SelectedItem;
             Ingredient newIngredient = new Ingredient(-1, Naam, InkoopPrijs, VerkoopPrijs, Vegetarisch, onderdeel);
             pizzeria.AddNewIngredient(newIngredient);
+            pizzeria.GetLists();
+            LoadListBoxes();
         }
+
+        private void btProAanmaken_Click(object sender, EventArgs e)
+        {
+            string Naam = tbProNaam.Text;
+            decimal InkoopPrijs = Convert.ToDecimal(tbProIn.Text);
+            decimal VerkoopPrijs = Convert.ToDecimal(tbProVer.Text);
+            bool Alcoholisch = cbAlcohol.Checked;
+            Product newProduct = new Product(-1, Naam, InkoopPrijs, VerkoopPrijs, Alcoholisch);
+            pizzeria.AddNewProduct(newProduct);
+            pizzeria.GetLists();
+            LoadListBoxes();
+        }
+
 
 
     }
