@@ -90,6 +90,7 @@
             this.tbInkIng = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tbIngNaam = new System.Windows.Forms.TextBox();
+            this.cbBezorgen = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -694,11 +695,22 @@
             this.tbIngNaam.Size = new System.Drawing.Size(100, 20);
             this.tbIngNaam.TabIndex = 0;
             // 
+            // cbBezorgen
+            // 
+            this.cbBezorgen.AutoSize = true;
+            this.cbBezorgen.Location = new System.Drawing.Point(497, 34);
+            this.cbBezorgen.Name = "cbBezorgen";
+            this.cbBezorgen.Size = new System.Drawing.Size(71, 17);
+            this.cbBezorgen.TabIndex = 7;
+            this.cbBezorgen.Text = "Bezorgen";
+            this.cbBezorgen.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 473);
+            this.Controls.Add(this.cbBezorgen);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btAanmelden);
             this.Controls.Add(this.lbAdres);
@@ -783,6 +795,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox tbNewPizNaam;
         private System.Windows.Forms.Button btNewPizza;
+        private System.Windows.Forms.CheckBox cbBezorgen;
     }
 }
 

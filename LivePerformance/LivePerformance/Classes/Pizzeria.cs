@@ -96,7 +96,7 @@ namespace LivePerformance.Classes
             InventarisRepo.AddNewStandardPizza(pizza);
         }
 
-        public decimal getTotalPrice()
+        public decimal[] getTotalPrice()
         {
             foreach (Pizza pizza in HuidigeBestelling.Pizzas)
             {

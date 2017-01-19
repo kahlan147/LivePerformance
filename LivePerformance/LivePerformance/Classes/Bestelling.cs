@@ -23,9 +23,11 @@ namespace LivePerformance
             this.HuidigeKlant = HuidigeKlant;
         }
 
-        public decimal GetTotalPrice()
+        public decimal[] GetTotalPrice()
         {
-            decimal TotalPrice = 0;
+            decimal[] TotalPrice = new decimal[2];
+            TotalPrice[0] = 0;
+            TotalPrice[1] = 0;
             decimal reductionPercentage;
             foreach (Pizza pizza in Pizzas)
             {
@@ -39,22 +41,29 @@ namespace LivePerformance
                 }
                 foreach (Ingredient ingredient in pizza.Ingredienten)
                 {
-                    TotalPrice += getCost(ingredient, reductionPercentage);
+                    TotalPrice[0] += getCost(ingredient, reductionPercentage, pizza);
                 }
             }
             foreach (Product product in Products)
             {
-                TotalPrice += getCost(product, 0);
+                TotalPrice[0] += (getCost(product, 0, null)/100);
+                if (product.Alcoholisch == true)
+                {
+                    TotalPrice[1] += TotalPrice[0] - (TotalPrice[0] * Convert.ToDecimal(0.21));
+                }
+                else
+                {
+                    TotalPrice[1] += TotalPrice[0] - (TotalPrice[0] * Convert.ToDecimal(0.06));
+                }
             }
             return TotalPrice;
         }
 
-        private decimal getCost(IPriceable Sellable, decimal reduction)
+        private decimal getCost(IPriceable Sellable, decimal reduction, Pizza pizza)
         {
             decimal duplicator = 1;
-            if (Sellable is Pizza)
+            if (Sellable is Ingredient)
             {
-                Pizza pizza = (Pizza)Sellable;
                 string formaat = pizza.Formaat;
                 string vorm = pizza.Vorm;
                 int[] numbers = new int[6];
@@ -82,12 +91,15 @@ namespace LivePerformance
                                 numbers[0] = Convert.ToInt32(number);
                                 number = "";
                             }
-                            if (thisChar == 'c')
+                            else if (thisChar == 'c')
                             {
                                 numbers[1] = Convert.ToInt32(number);
                                 break;
                             }
-                            number += thisChar;
+                            else
+                            {
+                                number += thisChar;
+                            }
                         }
                         Oppervlakte = Convert.ToDecimal(numbers[0] * numbers[1]);
                         break;
@@ -101,12 +113,15 @@ namespace LivePerformance
                                 number = "";
                                 x++;
                             }
-                            if (thisChar == 'c')
+                            else if (thisChar == 'c')
                             {
                                 numbers[2] = Convert.ToInt32(number);
                                 break;
                             }
-                            number += thisChar;
+                            else
+                            {
+                                number += thisChar;
+                            }
                         }
                         Oppervlakte = Convert.ToDecimal(0.5 * number[0] * number[1]);
                         break;

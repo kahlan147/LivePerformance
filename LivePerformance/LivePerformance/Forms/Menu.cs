@@ -101,11 +101,25 @@ namespace LivePerformance
 
         private void button3_Click(object sender, EventArgs e)
         {
+            pizzeria.HuidigeBestelling.Ophalen = cbBezorgen.Checked;
             pizzeria.SaveBestelling();
-            decimal TotalPrice = pizzeria.getTotalPrice();
-            MessageBox.Show("Totaal bedrag is: " + TotalPrice.ToString());
-            int amount = pizzeria.HuidigeBestelling.Pizzas.Count * 10;
-            MessageBox.Show("De pizza's zijn over " + amount.ToString() + " minuten klaar.");
+            decimal[] TotalPrice = pizzeria.getTotalPrice();
+            decimal[] EndPrice = new decimal[2];
+            EndPrice[0] = TotalPrice[0];
+            EndPrice[1] = TotalPrice[1];
+            if (EndPrice[1] > 0)
+            {
+                MessageBox.Show("Totaal bedrag is: €" + EndPrice[0].ToString() + " zonder btw, €" + EndPrice[1].ToString() + " met btw");
+            }
+            else
+            {
+                MessageBox.Show("Totaal bedrag is: €" + EndPrice[0].ToString());
+            }
+            if (pizzeria.HuidigeBestelling.Pizzas.Count > 0)
+            {
+                int amount = pizzeria.HuidigeBestelling.Pizzas.Count * 10;
+                MessageBox.Show("De pizza's zijn over " + amount.ToString() + " minuten klaar.");
+            }
         }
 
 
@@ -253,6 +267,7 @@ namespace LivePerformance
             else if(cbVorm.SelectedItem.ToString() == "Driehoek"){
                 Formaat+= "x" + tbFormaatY.Text + "x" + tbFormaatZ.Text;
             }
+            Formaat = Formaat + "cm";
             CustomPizza customPizza = new CustomPizza(Vorm, Formaat);
             pizzeria.CurrentNewPizza = customPizza;
         }
