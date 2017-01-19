@@ -718,7 +718,7 @@
             this.Controls.Add(this.tbAdres);
             this.Controls.Add(this.tbNaam);
             this.Name = "Form1";
-            this.Text = "Klant aanmelden";
+            this.Text = "Pizzeria La Crosta Insapore ";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
