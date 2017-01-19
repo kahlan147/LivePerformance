@@ -108,9 +108,10 @@ namespace LivePerformance
                             }
                             number += thisChar;
                         }
-                        Oppervlakte = 
+                        Oppervlakte = Convert.ToDecimal(0.5 * number[0] * number[1]);
                         break;
                 }
+                duplicator = Oppervlakte;
             }
             return (Sellable.VerkoopPrijs - (Sellable.VerkoopPrijs * reduction));
         }

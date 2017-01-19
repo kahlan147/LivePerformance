@@ -116,5 +116,33 @@ namespace LivePerformance.Data
             query = @"EXECUTE AddProduct '" + product.Naam + "', " + product.InkoopPrijs + ", " + product.VerkoopPrijs + ", " + Alcoholisch + ";";
             Database.Execute(query);
         }
+
+        public List<Ingredient> GetIngredientsFromPizza(int Id)
+        {
+            List<Ingredient> ingredients = new List<Ingredient>();
+            query = @"SELECT * FROM StandaardPizza WHERE PizzaId = " + Id + ";";
+            DataTable results = Database.Execute(query);
+            foreach (DataRow row in results.Rows)
+            {
+                query = @"SELECT * FROM Ingredient WHERE Id = " + Convert.ToInt32(row["IngredientId"].ToString()) + ";";
+                DataTable Ingresults = Database.Execute(query);
+                foreach (DataRow Ingrow in Ingresults.Rows)
+                {
+                    int IngId = Convert.ToInt32(Ingrow["Id"]);
+                    string Naam = Ingrow["Naam"].ToString();
+                    decimal InkoopPrijs = Convert.ToDecimal(Ingrow["InkoopPrijs"]);
+                    decimal VerkoopPrijs = Convert.ToDecimal(Ingrow["VerkoopPrijs"]);
+                    bool Vegetarisch = true;
+                    if (Ingrow["Vegetarisch"].ToString() == "0")
+                    {
+                        Vegetarisch = false;
+                    }
+                    Onderdeel Onderdeel = (Onderdeel)Convert.ToInt32(Ingrow["PizzaOnderdeel"].ToString());
+                    Ingredient ingredient = new Ingredient(IngId, Naam, InkoopPrijs, VerkoopPrijs, Vegetarisch, Onderdeel);
+                    ingredients.Add(ingredient);
+                }
+            }
+            return ingredients;
+        }
     }
 }

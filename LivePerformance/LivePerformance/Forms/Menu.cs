@@ -104,6 +104,8 @@ namespace LivePerformance
             pizzeria.SaveBestelling();
             decimal TotalPrice = pizzeria.getTotalPrice();
             MessageBox.Show("Totaal bedrag is: " + TotalPrice.ToString());
+            int amount = pizzeria.HuidigeBestelling.Pizzas.Count * 10;
+            MessageBox.Show("De pizza's zijn over " + amount.ToString() + " minuten klaar.");
         }
 
 

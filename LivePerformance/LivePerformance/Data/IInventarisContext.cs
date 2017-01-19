@@ -14,5 +14,6 @@ namespace LivePerformance.Data
         void AddNewIngredient(Ingredient ingredient);
         void AddNewStandardPizza(Pizza pizza);
         void AddNewProduct(Product product);
+        List<Ingredient> GetIngredientsFromPizza(int Id);
     }
 }

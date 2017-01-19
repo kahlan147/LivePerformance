@@ -46,5 +46,10 @@ namespace LivePerformance.Logic
             Context.AddNewProduct(product);
         }
 
+        public List<Ingredient> GetIngredientsFromPizza(int Id)
+        {
+            return Context.GetIngredientsFromPizza(Id);
+        }
+
     }
 }

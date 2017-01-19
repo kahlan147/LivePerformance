@@ -62,7 +62,7 @@
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Ingredient.cs" />
-    <Compile Include="IPriceable.cs" />
+    <Compile Include="Classes\IPriceable.cs" />
     <Compile Include="Classes\Klant.cs" />
     <Compile Include="Classes\Pizza.cs" />
     <Compile Include="Classes\Product.cs" />

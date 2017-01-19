@@ -98,6 +98,14 @@ namespace LivePerformance.Classes
 
         public decimal getTotalPrice()
         {
+            foreach (Pizza pizza in HuidigeBestelling.Pizzas)
+            {
+                if(pizza is StandaardPizza){
+                    StandaardPizza newPizza = (StandaardPizza)pizza;
+                    List<Ingredient> ingredients = InventarisRepo.GetIngredientsFromPizza(newPizza.Id);
+                    pizza.Ingredienten = ingredients;
+                }
+            }
             return HuidigeBestelling.GetTotalPrice();
         }
     }
