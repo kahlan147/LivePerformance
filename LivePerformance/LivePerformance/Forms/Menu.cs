@@ -102,6 +102,8 @@ namespace LivePerformance
         private void button3_Click(object sender, EventArgs e)
         {
             pizzeria.SaveBestelling();
+            decimal TotalPrice = pizzeria.getTotalPrice();
+            MessageBox.Show("Totaal bedrag is: " + TotalPrice.ToString());
         }
 
 
@@ -110,8 +112,8 @@ namespace LivePerformance
         private void LoadTab2()
         {
             cbVorm.Items.Add(Vorm.Vierkant);
-            cbVorm.Items.Add(Vorm.Driehoek);
             cbVorm.Items.Add(Vorm.Rechthoek);
+            cbVorm.Items.Add(Vorm.Driehoek);
             cbVorm.SelectedIndex = 0;
             LoadTab2ListBoxes();
         }

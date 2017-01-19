@@ -9,7 +9,7 @@ using LivePerformance.Data;
 namespace LivePerformance.Classes
 {
 
-    enum Vorm { Vierkant, Driehoek, Rechthoek };
+    public enum Vorm { Vierkant, Driehoek, Rechthoek };
 
     public class Pizzeria
     {
@@ -27,6 +27,8 @@ namespace LivePerformance.Classes
         {
             InventarisRepo = new InventarisRepository(new InventarisContext());
             BestellingRepo = new BestellingRepository(new BestellingContext());
+            Klant unknownKlant = new Klant("Unknown", "Unknown");
+            HuidigeBestelling = new Bestelling(unknownKlant);
             GetLists();
         }
 
@@ -92,6 +94,11 @@ namespace LivePerformance.Classes
         public void AddNewStandardPizza(Pizza pizza)
         {
             InventarisRepo.AddNewStandardPizza(pizza);
+        }
+
+        public decimal getTotalPrice()
+        {
+            return HuidigeBestelling.GetTotalPrice();
         }
     }
 }
