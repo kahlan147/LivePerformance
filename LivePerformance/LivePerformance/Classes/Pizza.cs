@@ -8,7 +8,6 @@ namespace LivePerformance
 {
     public abstract class Pizza
     {
-        public int Id { get; set; }
         public string Vorm { get; set; }
         public string Formaat { get; set; }
         public List<Ingredient> Ingredienten { get; set; }
@@ -20,15 +19,15 @@ namespace LivePerformance
             Ingredienten = new List<Ingredient>();
         }
 
-        public Pizza(int Id, string Vorm, string Formaat)
+        public Pizza(string Vorm, string Formaat)
         {
-            this.Id = Id;
             this.Vorm = Vorm;
             this.Formaat = Formaat;
+            Ingredienten = new List<Ingredient>();
         }
 
         public override string ToString(){
-            return Id + ", " + Vorm + ", " + Formaat;
+            return Vorm + ", " + Formaat;
         }
     }
 }

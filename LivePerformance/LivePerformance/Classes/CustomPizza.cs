@@ -9,15 +9,15 @@ namespace LivePerformance
     public class CustomPizza : Pizza
     {
 
-        public CustomPizza()
-            : base()
+        public CustomPizza(string Vorm, string Formaat)
+            : base(Vorm, Formaat)
         {
 
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Custom" + ", " + base.ToString();
         }
     }
 }

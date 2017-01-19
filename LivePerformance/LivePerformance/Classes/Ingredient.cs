@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivePerformance
 {
-    enum Onderdeel { Bodem, Saus, Topping };
+    public enum Onderdeel { Bodem, Saus, Topping };
     public class Ingredient : IPriceable
     {
         public int Id { get; set; }
@@ -15,21 +15,21 @@ namespace LivePerformance
         public decimal VerkoopPrijs { get; set; }
         public bool Vegetarisch { get; set; }
 
-        public int Onderdeel { get; set; }
+        public Onderdeel onderdeel { get; set; }
 
         public Ingredient()
         {
 
         }
 
-        public Ingredient(int Id, string Naam, decimal InkoopPrijs, decimal VerkoopPrijst, bool Vegetarisch, int Onderdeel)
+        public Ingredient(int Id, string Naam, decimal InkoopPrijs, decimal VerkoopPrijs, bool Vegetarisch, Onderdeel Onderdeel)
         {
             this.Id = Id;
             this.Naam = Naam;
             this.InkoopPrijs = InkoopPrijs;
             this.VerkoopPrijs = VerkoopPrijs;
             this.Vegetarisch = Vegetarisch;
-            this.Onderdeel = Onderdeel;
+            this.onderdeel = Onderdeel;
         }
 
         public decimal CalcTruePrice()
@@ -39,7 +39,7 @@ namespace LivePerformance
 
         public override string ToString()
         {
-            return Naam + ", " + InkoopPrijs + ", " + VerkoopPrijs + ", " + Vegetarisch + ", " + Onderdeel;
+            return Naam + ", " + InkoopPrijs + ", " + VerkoopPrijs + ", " + Vegetarisch;
         }
     }
 }

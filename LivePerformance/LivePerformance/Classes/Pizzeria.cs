@@ -19,6 +19,8 @@ namespace LivePerformance.Classes
         public List<Pizza> Pizzas { get; private set; }
         public List<Ingredient> Ingredients { get; private set; }
         public Bestelling HuidigeBestelling { get; private set; }
+        public Pizza CurrentNewPizza { get; set; }
+        public List<Ingredient> IngredientsCustPizza { get; set; }
 
         public Pizzeria()
         {
@@ -50,6 +52,11 @@ namespace LivePerformance.Classes
                 }
             }
             HuidigeBestelling.Pizzas.Add(chosenPizza);
+        }
+
+        public void AddCustomPizzaToBestelling(Pizza pizza)
+        {
+            HuidigeBestelling.Pizzas.Add(pizza);
         }
 
         public void AddProductToBestelling(string ProductString)

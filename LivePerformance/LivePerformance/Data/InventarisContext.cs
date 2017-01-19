@@ -27,7 +27,7 @@ namespace LivePerformance.Data
                 {
                     Vegetarisch = false;
                 }
-                int Onderdeel = Convert.ToInt32(row["PizzaOnderdeel"].ToString());
+                Onderdeel Onderdeel = (Onderdeel)Convert.ToInt32(row["PizzaOnderdeel"].ToString());
                 Ingredient ingredient = new Ingredient(Id,Naam,InkoopPrijs,VerkoopPrijs,Vegetarisch, Onderdeel);
                 Ingredienten.Add(ingredient);
             }

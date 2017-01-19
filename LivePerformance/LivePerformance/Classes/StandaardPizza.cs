@@ -8,16 +8,18 @@ namespace LivePerformance
 {
     public class StandaardPizza : Pizza
     {
+        public int Id { get; set; }
         public string Naam { get; set; }
         public StandaardPizza(int Id, string Vorm, string Formaat, string Naam)
-            : base(Id, Vorm, Formaat)
+            : base(Vorm, Formaat)
         {
+            this.Id = Id;
             this.Naam = Naam;
         }
 
         public override string ToString()
         {
-            return base.ToString() +", " +  Naam;
+            return Id + ", " +  Naam + ", " + base.ToString();
         }
     }
 }

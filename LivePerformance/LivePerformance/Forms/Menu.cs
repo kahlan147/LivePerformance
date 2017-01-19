@@ -52,7 +52,6 @@ namespace LivePerformance
                     lbAdres.Visible = false;
                     tbNaam.Text = "";
                     tbAdres.Text = "";
-                    MessageBox.Show(pizzeria.HuidigeKlant.Klantnummer.ToString());
                 }
                 else
                 {
@@ -114,15 +113,168 @@ namespace LivePerformance
         {
             foreach (Ingredient ingredient in pizzeria.Ingredients)
             {
-                
+                if (ingredient.onderdeel == Onderdeel.Bodem)
+                {
+                    lbBodem.Items.Add(ingredient.ToString());
+                }
+                else if (ingredient.onderdeel == Onderdeel.Saus)
+                {
+                    lbSaus.Items.Add(ingredient.ToString());
+                }
+                else
+                {
+                    lbTopping.Items.Add(ingredient.ToString());
+                }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void cbVorm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbVorm.SelectedIndex == 0)
+            {
+                tbFormaatY.Visible = false;
+                tbFormaatZ.Visible = false;
+                lbY.Visible = false;
+                lbZ.Visible = false;
+            }
+            else if (cbVorm.SelectedIndex == 1)
+            {
+                tbFormaatY.Visible = true;
+                tbFormaatZ.Visible = false;
+                lbY.Visible = true;
+                lbZ.Visible = false;
+            }
+            else if (cbVorm.SelectedIndex == 2)
+            {
+                tbFormaatY.Visible = true;
+                tbFormaatZ.Visible = true;
+                lbY.Visible = true;
+                lbZ.Visible = true;
+            }
         }
 
+        private void btBodem_Click(object sender, EventArgs e)
+        {
+            if (IsPizzaMade())
+            {
+                foreach (Ingredient ingredient in pizzeria.CurrentNewPizza.Ingredienten)
+                {
+                    if (ingredient.onderdeel == Onderdeel.Bodem)
+                    {
+                        pizzeria.CurrentNewPizza.Ingredienten.Remove(ingredient);
+                        break;
+                    }
+                }
+                Ingredient newIngredient = null;
+                foreach (Ingredient ingredient in pizzeria.Ingredients)
+                {
+                    if (ingredient.ToString() == lbBodem.SelectedItem.ToString())
+                    {
+                        newIngredient = ingredient;
+                    }
+                }
+                pizzeria.CurrentNewPizza.Ingredienten.Add(newIngredient);
+                showCurrentIngredients();
+            }
+            else
+            {
+                MessageBox.Show("Maak eerst een pizza aan");
+            }
+        }
+
+        private void btSaus_Click(object sender, EventArgs e)
+        {
+            if(IsPizzaMade()){
+                foreach (Ingredient ingredient in pizzeria.CurrentNewPizza.Ingredienten)
+                {
+                    if (ingredient.onderdeel == Onderdeel.Saus)
+                    {
+                        pizzeria.CurrentNewPizza.Ingredienten.Remove(ingredient);
+                    }
+                }
+                Ingredient newIngredient = null;
+                foreach (Ingredient ingredient in pizzeria.Ingredients)
+                {
+                    if (ingredient.ToString() == lbSaus.SelectedItem.ToString())
+                    {
+                        newIngredient = ingredient;
+                        break;
+                    }
+                }
+                pizzeria.CurrentNewPizza.Ingredienten.Add(newIngredient);
+                showCurrentIngredients();
+            }
+            else
+            {
+                MessageBox.Show("Maak eerst een pizza aan");
+            }
+        }
+
+        private void btTopping_Click(object sender, EventArgs e)
+        {
+            if (IsPizzaMade())
+            {
+                Ingredient newIngredient = null;
+                foreach (Ingredient ingredient in pizzeria.Ingredients)
+                {
+                    if (ingredient.ToString() == lbTopping.SelectedItem.ToString())
+                    {
+                        newIngredient = ingredient;
+                    }
+                }
+                pizzeria.CurrentNewPizza.Ingredienten.Add(newIngredient);
+                showCurrentIngredients();
+            }
+            else
+            {
+                MessageBox.Show("Maak eerst een pizza aan");
+            }
+        }
+
+        private void btNewCusPizza_Click(object sender, EventArgs e)
+        {
+            string Vorm = cbVorm.SelectedItem.ToString();
+            string Formaat = tbFormaatX.Text;
+            if(cbVorm.SelectedItem.ToString() == "Rechthoek"){
+                Formaat += "x" + tbFormaatY.Text;
+            }
+            else if(cbVorm.SelectedItem.ToString() == "Driehoek"){
+                Formaat+= "x" + tbFormaatY.Text + "x" + tbFormaatZ.Text;
+            }
+            CustomPizza customPizza = new CustomPizza(Vorm, Formaat);
+            pizzeria.CurrentNewPizza = customPizza;
+        }
+
+        private void showCurrentIngredients()
+        {
+            lbCustPizzaIng.Items.Clear();
+            foreach (Ingredient ingredient in pizzeria.CurrentNewPizza.Ingredienten)
+            {
+                lbCustPizzaIng.Items.Add(ingredient.ToString());
+            }
+        }
+
+        private bool IsPizzaMade()
+        {
+            if (pizzeria.CurrentNewPizza != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        private void btGereed_Click(object sender, EventArgs e)
+        {
+            pizzeria.AddCustomPizzaToBestelling(pizzeria.CurrentNewPizza);
+            DoBestellingListBox();
+            pizzeria.CurrentNewPizza = null;
+            lbCustPizzaIng.Items.Clear();
+            MessageBox.Show("Custom pizza is aan de bestelling toegevoegd");
+        }
 
 
     }
